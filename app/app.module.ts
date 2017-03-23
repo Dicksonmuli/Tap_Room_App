@@ -1,3 +1,4 @@
+//imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +23,7 @@ import {
         BrowserModule,
         FormsModule
       ],
+      //class declarations
   declarations: [
     AppComponent,
     KegListComponent,
@@ -34,7 +36,7 @@ import {
 
 
 })
-
+//export class App module to be used in othe files
  export class AppModule{
 
  }

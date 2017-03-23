@@ -33,5 +33,22 @@ import { Bar } from './bar.model';
 
 //main class
 export class AppComponent{
-
+  public masterKegList: Bar[] = [
+  new Bar(1,"Narco", "The First", 10, false),
+  new Bar(2,"Bombasto", "The Sec", 20, false),
+  new Bar(3,"Celeritas", "The Third", 30, true),
+  new Bar(4,"Magneta", "The Fourth", 40, true),
+  new Bar(5,"Magma", "The Fifth", 50,true),
+  new Bar(6,"Tornado", "The Sixth", 60, true),
+];
+selectedKeg: Bar = null;
+  showDetails(clickedKeg: Bar) {
+    this.selectedKeg = clickedKeg;
+  }
+  edited() {
+    this.selectedKeg = null;
+  }
+newKeg(newKegFromChild: Bar){
+  this.masterKegList.push(newKegFromChild)
+}
 }

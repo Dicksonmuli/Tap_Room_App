@@ -44,4 +44,5 @@ export class KegListComponent {
   this.selectedCompleteness = optionFromMenu;
   console.log(optionFromMenu);
 }
+
  }

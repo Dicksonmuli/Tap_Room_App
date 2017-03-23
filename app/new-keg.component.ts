@@ -28,5 +28,9 @@ import { Bar } from './bar.model';
 })
 
 export class NewKegComponent{
-
+  @Output() newKegSender = new EventEmitter();
+  addClicked(id: number, name: string, description: string, price: number, done: boolean  ){
+    var newKegToAdd: Bar = new Bar(id, name, description, price, done);
+    this.newKegSender.emit(newKegToAdd);
+  }
 }

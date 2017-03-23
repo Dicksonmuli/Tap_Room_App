@@ -28,6 +28,10 @@ import { Bar } from './bar.model';
 })
 
 export class EditKegComponent {
-  
+  @Input() selectedChildKeg: Bar;
+  @Output() doneClickedSender = new EventEmitter();
+  doneClicked(){
+    this.doneClickedSender.emit();
+  }
 
 }
